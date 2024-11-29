@@ -43,28 +43,28 @@ template.innerHTML = /*html*/
          <div class="squareGame animated bounceInLeft">
             <div class="imgGame overwatch"></div>
             <div class="gameText">
-               <a>Start</a>
+               <a>Ping Pong</a>
             </div>
          </div>
          <div class="squareGame animated bounceInLeft">
             <div class="imgGame rocketLeague"></div>
-            <div class="gameText">Start</div>
+            <div class="gameText">Shadow Fighter</div>
          </div>
          <div class="squareGame animated bounceInLeft">
             <div class="imgGame cod"></div>
-            <div class="gameText">Start</div>
+            <div class="gameText">Stunt Multiplayer Arena</div>
          </div>
          <div class="squareGame animated bounceInLeft">
             <div class="imgGame youtube"></div>
-            <div class="gameText">Start</div>
+            <div class="gameText">YouTube</div>
          </div>
          <div class="squareGame animated bounceInLeft">
             <div class="imgGame bro"></div>
-            <div class="gameText">Start</div>
+            <div class="gameText">BroForce</div>
          </div>
          <div class="squareGame animated bounceInLeft">
             <div class="imgGame outlast"></div>
-            <div class="gameText">Start</div>
+            <div class="gameText">Outlast 2</div>
          </div>
          <div class="squareGame animated bounceInLeft">
             <div class="imgGame new">

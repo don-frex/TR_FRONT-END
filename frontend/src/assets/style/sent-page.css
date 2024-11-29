@@ -1,0 +1,15 @@
+/****** SENT.css ******/
+
+.sentemail{
+	text-align: center;
+}
+
+.sentemail h1{
+	color: #fff;
+	font-weight: 700;
+}
+
+.sentemail h3{
+	color: #fff;
+	/* font-weight: 700; */
+}

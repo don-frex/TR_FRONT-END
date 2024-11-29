@@ -40,6 +40,13 @@ const routes = [
 		await import('../pages/sent.js');
 		return '<sent-page></sent-page>';
 	  },
+	  },
+	  {
+		path: '/404',
+		view: async () => {
+		await import('../pages/404.js');
+		return '<page_404-page></page_404-page>';
+	  },
 	  }
   ]
 export default routes;
