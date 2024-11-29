@@ -33,6 +33,13 @@ const routes = [
 		await import('../pages/settings.js');
 		return '<settings-page></settings-page>';
 	  },
+	  },
+	  {
+		path: '/sent',
+		view: async () => {
+		await import('../pages/sent.js');
+		return '<sent-page></sent-page>';
+	  },
 	  }
   ]
 export default routes;

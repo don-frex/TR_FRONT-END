@@ -2,27 +2,6 @@
 module.exports = {
   routes: [
     {
-      path: '/game',
-      view: async () => {
-      await import('../pages/game.js');
-      return '<game-page></game-page>';
-    }
-    },
-    {
-      path: '/contact',
-      view: async () => {
-      await import('../pages/contact.js');
-      return '<contact-page></contact-page>';
-    }
-    },
-    {
-      path: '/hassan',
-      view: async () => {
-      await import('../pages/hassan.js');
-      return '<hassan-page></hassan-page>';
-    }
-    },
-    {
       path: '/signin',
       view: async () => {
       await import('../pages/signin.js');

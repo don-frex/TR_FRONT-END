@@ -2,41 +2,41 @@ let template = document.createElement("template");
 
 template.innerHTML = /*html*/`
 <div>
-<div class="body-form">
-<nav>
-   <router-link to="/home" kind="link">
-   <img class="logo" src="src/assets/images/TR-logo.png">
-   </router-link>
-   <!--<a href="Home Page.html">
-   <img class="logo" src="src/assets/images/TR-logo.png">
-   </a>-->
-   <img src="https://cdn.intra.42.fr/users/6346b9909265439cf973f7d7ecb87989/asaber.jpg" class="user-pic">
-   <div class="sub-menu-wrap" id="subMenu">
-	  <div class="sub-menu">
-		 <div class="user-info">
-			<img src="https://cdn.intra.42.fr/users/6346b9909265439cf973f7d7ecb87989/asaber.jpg">
-			<h2>Adnane Saber</h2>
-		 </div>
-		 <hr>
-		 <router-link to="/profile" class="sub-menu-link">
-			<img src="src/assets/images/user-icon.png">
-			<p> Profile</p>
-			<span>></span>
-		   </router-link>
-		 <router-link to="/settings" class="sub-menu-link">
-			<img src="src/assets/images/setting-icon.png">
-			<p> Settings</p>
-			<span>></span>
+	<div class="body-form">
+         <nav>
+			<router-link to="/home" kind="link">
+			<img class="logo" src="src/assets/images/TR-logo.png">
 			</router-link>
-		 <router-link to="/signin" class="sub-menu-link">
-			<img src="src/assets/images/og-out-icon.png">
-			<p> Log out</p>
-			<span>></span>
-			</router-link>
-	  </div>
-   </div>
-</nav>
-</div>
+            <!--<a href="Home Page.html">
+            <img class="logo" src="src/assets/images/TR-logo.png">
+            </a>-->
+            <img src="https://cdn.intra.42.fr/users/6346b9909265439cf973f7d7ecb87989/asaber.jpg" class="user-pic">
+            <div class="sub-menu-wrap" id="subMenu">
+               <div class="sub-menu">
+                  <div class="user-info">
+                     <img src="https://cdn.intra.42.fr/users/6346b9909265439cf973f7d7ecb87989/asaber.jpg">
+                     <h2>Adnane Saber</h2>
+                  </div>
+                  <hr>
+                  <router-link to="/profile" class="sub-menu-link">
+                     <img src="src/assets/images/user-icon.png">
+                     <p> Profile</p>
+                     <span>></span>
+					</router-link>
+                  <router-link to="/settings" class="sub-menu-link">
+                     <img src="src/assets/images/setting-icon.png">
+                     <p> Settings</p>
+                     <span>></span>
+					 </router-link>
+                  <router-link to="/signin" class="sub-menu-link">
+                     <img src="src/assets/images/og-out-icon.png">
+                     <p> Log out</p>
+                     <span>></span>
+					 </router-link>
+               </div>
+            </div>
+         </nav>
+      </div>
 <div class="Psetting_container">
 	<div class="form-Psetting_container Profile_upload">
 		<h1>Profile Settings</h1>
@@ -79,7 +79,7 @@ class SETTINGS extends HTMLElement {
 
   connectedCallback() {
     console.log("SETTINGS is Connected");
-	runsetting();
+	this.runsetting();
   }
   
   disconnectedCallback() {
@@ -94,12 +94,14 @@ class SETTINGS extends HTMLElement {
     // called when one of attributes listed above is modified
   }
   runsetting(params){
-	let profile_pic = document.getElementById("profile-pic");
-	let input_file = document.getElementById("input-file");
+	/******************** subMenu ***********************************/
+	let subMenu = this.shadow.getElementById("subMenu");
+	let profilePic = this.shadow.querySelector(".user-pic");
+	console.log(profilePic)
 
-	input_file.onchange = function(){
-		profile_pic.src = URL.createObjectURL(input_file.files[0]);
-	}
+	profilePic.addEventListener("click",()=>{
+		subMenu.classList.toggle("open-menu");
+	})
   }
 }
 customElements.define('settings-page', SETTINGS);
